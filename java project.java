@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
-// Consumer Class (Data Layer)
+
 class Consumer {
     private int id;
     private String name;
     private int unitsConsumed;
 
-    // Constructor
+
     public Consumer(int id, String name, int unitsConsumed) {
         this.id = id;
         this.name = name;
         this.unitsConsumed = unitsConsumed;
     }
 
-    // Getters
+    
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ class Consumer {
     }
 }
 
-// TariffCalculator Class (Logic Layer)
+
 class TariffCalculator {
 
     public double calculateBill(int units) {
@@ -50,7 +50,7 @@ class TariffCalculator {
     }
 }
 
-// Main Class (Execution Layer)
+
 public class ElectricityBillSystem {
 
     public static void main(String[] args) {
@@ -61,7 +61,7 @@ public class ElectricityBillSystem {
 
         System.out.print("Enter Consumer ID: ");
         int id = sc.nextInt();
-        sc.nextLine(); // clear buffer
+        sc.nextLine(); 
 
         System.out.print("Enter Consumer Name: ");
         String name = sc.nextLine();
@@ -69,13 +69,13 @@ public class ElectricityBillSystem {
         System.out.print("Enter Units Consumed: ");
         int units = sc.nextInt();
 
-        // Create Consumer Object
+       
         Consumer consumer = new Consumer(id, name, units);
 
-        // Calculate Bill
+      
         double billAmount = calculator.calculateBill(consumer.getUnitsConsumed());
 
-        // Display Output
+       
         System.out.println("\n===== BILL DETAILS =====");
         System.out.println("Consumer ID   : " + consumer.getId());
         System.out.println("Name          : " + consumer.getName());
